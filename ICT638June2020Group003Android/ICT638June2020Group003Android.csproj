@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\agent_activity.cs" />
+    <Compile Include="Activities\RegisterActivity.cs" />
     <Compile Include="Activities\UserProfile.cs" />
     <Compile Include="Agent.cs" />
     <Compile Include="MainActivity.cs" />
