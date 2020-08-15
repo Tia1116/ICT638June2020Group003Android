@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+      <TextView
+        android:id="@+id/agenttt"
+        android:text="@string/agenttt"
+        android:gravity="center_vertical"
+        android:background="#0000"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+    <ImageView
+        android:id="@+id/agentPic"
+        android:src="@drawable/agent"
+        android:contentDescription="@sting/agentPic"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30.5dp"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="@string/name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView1" />
+        <TextView
+            android:text="123"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/agent_name" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30.5dp"
+        android:id="@+id/linearLayout2">
+        <TextView
+            android:text="@string/PhoneNo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView2" />
+        <TextView
+            android:text="123"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/agent_phoneNo" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout3">
+        <TextView
+            android:text="@string/email"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView3" />
+        <TextView
+            android:text=" 123"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/agent_email" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/mapContainer1"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/button1"
+            android:text="@string/share"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/button2"
+            android:text="@string/Email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/bthouse"
+        android:text="House"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btagent"
+        android:text="Agent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btusers"
+        android:text="User"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>
