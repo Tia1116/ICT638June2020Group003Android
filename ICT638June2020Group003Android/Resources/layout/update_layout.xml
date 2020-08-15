@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Update User Details"
+        android:textColor="#f369"
+        android:gravity="center"
+        android:paddingBottom="25dp"/>
+
+    <EditText
+        android:id="@+id/txt_first_name_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="First Name"
+
+       />
+
+    <EditText
+        android:id="@+id/txt_last_name_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Last Name"
+        />
+
+
+    <EditText
+        android:id="@+id/txt_phone_number_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phone Number"
+        />
+    <EditText
+        android:id="@+id/txt_address_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        />
+    <EditText
+        android:id="@+id/txt_country_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Country"
+        />
+
+    <EditText
+        android:id="@+id/txt_email_address_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email Address"/>
+
+    <FrameLayout
+        android:id="@+id/map_Fragtag"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <Button
+        android:id="@+id/btn_update_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update User Information"/>
+    <Button
+        android:id="@+id/btn_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="share user"/>
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="send user"/>
+</LinearLayout>
