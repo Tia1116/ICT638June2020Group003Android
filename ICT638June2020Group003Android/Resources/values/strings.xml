@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">ICT638June2020Group003Android</string>
     <string name="action_settings">Settings</string>
+  <string name=" agenttt">Agent Infomation</string>
+  <string name=" agentPic">agentpic</string>
+  <string name=" name">Name : </string>
+  <string name=" email">Email Address : </string>
+  <string name=" PhoneNo">Phone Number : </string>
+  <string name=" share">share</string>
+  <string name=" Email">Email</string>
 </resources>
