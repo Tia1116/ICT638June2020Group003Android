@@ -63,6 +63,9 @@ namespace ICT638June2020Group003Android.Activities
             Button btn_Send = FindViewById<Button>(Resource.Id.btn_send);
             btn_Send.Click += Btn_Send_Click;
 
+            Button btn_connect = FindViewById<Button>(Resource.Id.btn_connection);
+            btn_connect.Click += Btn_connect_Click;
+
             //Map
             var mapFrag = MapFragment.NewInstance();// mapOptions);
 
@@ -71,6 +74,11 @@ namespace ICT638June2020Group003Android.Activities
                                    .Commit();
 
             mapFrag.GetMapAsync(this);
+        }
+
+        private void Btn_connect_Click(object sender, EventArgs e)
+        {
+            StartActivity(typeof(agent_activity));
         }
 
         //Send Message
