@@ -59,11 +59,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-    <Button
-        android:id="@+id/btn_update_up"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Update User Information"/>
+    
     <Button
         android:id="@+id/btn_share"
         android:layout_width="match_parent"
@@ -74,4 +70,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="send user"/>
+    <Button
+        android:id="@+id/btn_connection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="connect to next page"/>
 </LinearLayout>

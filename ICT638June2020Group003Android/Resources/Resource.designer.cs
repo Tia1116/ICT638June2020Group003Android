@@ -3562,25 +3562,25 @@ namespace ICT638June2020Group003Android
 			public const int bthouse = 2131230772;
 			
 			// aapt resource value: 0x7F080035
-			public const int btn_home = 2131230773;
+			public const int btn_connection = 2131230773;
 			
 			// aapt resource value: 0x7F080036
-			public const int btn_login = 2131230774;
+			public const int btn_home = 2131230774;
 			
 			// aapt resource value: 0x7F080037
-			public const int btn_register_add = 2131230775;
+			public const int btn_login = 2131230775;
 			
 			// aapt resource value: 0x7F080038
-			public const int btn_register_page = 2131230776;
+			public const int btn_register_add = 2131230776;
 			
 			// aapt resource value: 0x7F080039
-			public const int btn_send = 2131230777;
+			public const int btn_register_page = 2131230777;
 			
 			// aapt resource value: 0x7F08003A
-			public const int btn_share = 2131230778;
+			public const int btn_send = 2131230778;
 			
 			// aapt resource value: 0x7F08003B
-			public const int btn_update_up = 2131230779;
+			public const int btn_share = 2131230779;
 			
 			// aapt resource value: 0x7F08003C
 			public const int btusers = 2131230780;
