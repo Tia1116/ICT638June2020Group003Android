@@ -8,18 +8,36 @@ using System.Net;
 using System.IO;
 using System.Text;
 using ICT638June2020Group003Android.Activities;
+using Android.Util;
+using Android.Gms.Common;
 
 namespace ICT638June2020Group003Android
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
+        public const string TAG = "MainActivity";
+        internal static readonly string CHANNEL_ID = "my_notification_channel";
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.login_layout);
+            if (Intent.Extras != null)
+            {
+                foreach (var key in Intent.Extras.KeySet())
+                {
+                    if (key != null)
+                    {
+                        var value = Intent.Extras.GetString(key);
+                        Log.Debug(TAG, "Key: {0} Value: {1}", key, value);
+                    }
+                }
+            }
+
+            IsPlayServicesAvailable();
+            CreateNotificationChannel();
 
             //Button Login and Singin
             Button btn_login = FindViewById<Button>(Resource.Id.btn_login);
@@ -27,6 +45,24 @@ namespace ICT638June2020Group003Android
 
             Button btn_signin = FindViewById<Button>(Resource.Id.btn_register_page);
             btn_signin.Click += Btn_signin_Click;
+        }
+        public bool IsPlayServicesAvailable()
+        {
+            int resultCode = GoogleApiAvailability.Instance.IsGooglePlayServicesAvailable(this);
+            if (resultCode != ConnectionResult.Success)
+            {
+                if (GoogleApiAvailability.Instance.IsUserResolvableError(resultCode))
+                    Log.Debug(TAG, GoogleApiAvailability.Instance.GetErrorString(resultCode));
+                else
+                {
+                    Log.Debug(TAG, "This device is not supported");
+                    Finish();
+                }
+                return false;
+            }
+
+            Log.Debug(TAG, "Google Play Services is available.");
+            return true;
         }
 
         private void Btn_signin_Click(object sender, EventArgs e)
@@ -62,6 +98,26 @@ namespace ICT638June2020Group003Android
             {
                 StartActivity(typeof(DetailActivity));
             }
+        }
+        private void CreateNotificationChannel()
+        {
+            if (Build.VERSION.SdkInt < BuildVersionCodes.O)
+            {
+                // Notification channels are new in API 26 (and not a part of the
+                // support library). There is no need to create a notification
+                // channel on older versions of Android.
+                return;
+            }
+
+            var channelName = CHANNEL_ID;
+            var channelDescription = string.Empty;
+            var channel = new NotificationChannel(CHANNEL_ID, channelName, NotificationImportance.Default)
+            {
+                Description = channelDescription
+            };
+
+            var notificationManager = (NotificationManager)GetSystemService(NotificationService);
+            notificationManager.CreateNotificationChannel(channel);
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

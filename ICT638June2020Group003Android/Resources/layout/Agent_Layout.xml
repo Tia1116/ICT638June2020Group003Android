@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -6,10 +6,10 @@
       <TextView
         android:id="@+id/agenttt"
         android:text="@string/agenttt"
-        android:gravity="center_vertical"
+        android:gravity="center"
         android:background="#0000"
         android:layout_width="match_parent"
-        android:layout_height="30dp"/>
+        android:layout_height="50dp"/>
     <ImageView
         android:id="@+id/agentPic"
         android:src="@drawable/agent"
@@ -88,21 +88,22 @@
             android:layout_height="wrap_content"/>
 
     </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <Button
-        android:id="@+id/bthouse"
-        android:text="House"
+        android:id="@+id/btnUser"
+        android:gravity="center_vertical"
+        android:text="User Profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <Button
-        android:id="@+id/btagent"
-        android:text="Agent"
+        android:id="@+id/btnLogout"
+        android:text="Logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-    <Button
-        android:id="@+id/btusers"
-        android:text="User"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        </LinearLayout>>
 
 
 </LinearLayout>

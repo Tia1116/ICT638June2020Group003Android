@@ -38,52 +38,54 @@ namespace ICT638June2020Group003Android.Activities
             btn1.Click += Btn1_Click; ;
             Button btn2 = FindViewById<Button>(Resource.Id.button2);
             btn2.Click += Btn2_Click; ;
-            Button BtnU = FindViewById<Button>(Resource.Id.btusers);
-            btn2.Click += Btn2_Click1;
-            Button btagent = FindViewById<Button>(Resource.Id.btagent);
-            btagent.Click += Btagent_Click;
+            Button btnUser = FindViewById<Button>(Resource.Id.btnUser);
+            btnUser.Click += BtnUser_Click;
+            Button btnLog = FindViewById<Button>(Resource.Id.btnLogout);
+            btnLog.Click += BtnLog_Click;
             //api connection
 
-
-            TextView name = FindViewById<TextView>(Resource.Id.agent_name);
+            try
+            {
+                TextView name = FindViewById<TextView>(Resource.Id.agent_name);
             TextView phoneNumber = FindViewById<TextView>(Resource.Id.agent_phoneNo);
             TextView email = FindViewById<TextView>(Resource.Id.agent_email);
-
-            string url = "https://10.0.2.2:5001/api/Agents/1";
-            string result = "";
-            var httpWebRequest = new HttpWebRequest(new Uri(url));
-            httpWebRequest.ServerCertificateValidationCallback = delegate { return true; };
-            httpWebRequest.ContentType = "application/json";
-            httpWebRequest.Method = "Get";
-            HttpWebResponse response = (HttpWebResponse)httpWebRequest.GetResponse();
-            using (StreamReader reader = new StreamReader(response.GetResponseStream(), Encoding.UTF8))
-            {
-                result = reader.ReadToEnd();
+           
+                string url = "https://10.0.2.2:5001/api/Agents1/1";
+                string result = "";
+                var httpWebRequest = new HttpWebRequest(new Uri(url));
+                httpWebRequest.ServerCertificateValidationCallback = delegate { return true; };
+                httpWebRequest.ContentType = "application/json";
+                httpWebRequest.Method = "Get";
+                HttpWebResponse response = (HttpWebResponse)httpWebRequest.GetResponse();
+                using (StreamReader reader = new StreamReader(response.GetResponseStream(), Encoding.UTF8))
+                {
+                    result = reader.ReadToEnd();
+                }
+                Agent agent = new Agent();
+                agent = Newtonsoft.Json.JsonConvert.DeserializeObject<Agent>(result);
+                name.Text = agent.name;
+                email.Text = agent.email;
+                phoneNumber.Text = agent.phoneNumber;
             }
-            Agent agent = new Agent();
-            agent = Newtonsoft.Json.JsonConvert.DeserializeObject<Agent>(result);
-            name.Text = agent.name;
-            email.Text = agent.email;
-            phoneNumber.Text = agent.phoneNumber;
 
+            catch(Exception e)
+            {
 
+            }
 
             //BottomNavigationView
             // BottomNavigationView navigation = FindViewById<BottomNavigationView>(Resource.Id.bottomNavigationView1);
             //navigation.SetOnNavigationItemSelectedListener(this);
         }
 
-        private void Btagent_Click(object sender, EventArgs e)
+        private void BtnLog_Click(object sender, EventArgs e)
         {
-
-            StartActivity(typeof(agent_activity));
+            StartActivity(typeof(RegisterActivity));
         }
 
-        private void Btn2_Click1(object sender, EventArgs e)
+        private void BtnUser_Click(object sender, EventArgs e)
         {
-            Intent intent = new Intent();
-            intent.SetClass(this, typeof(UserProfile));
-            StartActivity(intent);
+            StartActivity(typeof(DetailActivity));
         }
 
         private async void Btn2_Click(object sender, System.EventArgs e)

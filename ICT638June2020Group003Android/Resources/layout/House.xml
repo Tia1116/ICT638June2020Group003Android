@@ -1,0 +1,150 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    
+
+        <TextView
+        android:id="@+id/txtrenthouse1"
+        android:text="city 247"
+        android:textSize="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button3"/>
+
+
+    <TextView
+        android:id="@+id/txtrenthouse1bedroom"
+        android:layout_below="@id/txtrenthouse1"
+        android:text="This is bedroom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold|italic"
+        android:textSize="14dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/txtrenthouse1bedroomrespond"
+        android:textStyle="bold|italic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:layout_below="@id/txtrenthouse1bedroom"/>
+
+    <TextView
+        android:id="@+id/txtrenthouse1address"
+        android:text="This is address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="14dp" 
+        android:layout_below="@id/txtrenthouse1bedroomrespond"/>
+
+    <TextView
+        android:id="@+id/txtrenthouse1addressrespond"
+        android:textSize="14dp" 
+        android:textStyle="bold|italic"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtrenthouse1address"/>
+
+    <TextView
+        android:id="@+id/txtrenthouse1Bathroomdetail"
+        android:layout_below="@id/txtrenthouse1addressrespond"
+        android:text="This is Bathroom"
+        android:textSize="14dp"
+        android:textStyle="bold|italic"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/txthouse1Bathroomrespond"
+        android:layout_below="@id/txtrenthouse1Bathroomdetail"
+        android:textStyle="bold|italic"
+        android:textSize="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/txtrenthouse1pay"
+        android:text="This is payment"
+        android:textSize="14dp"
+        android:textStyle="bold|italic"
+         android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txthouse1Bathroomrespond"/>
+
+    <FrameLayout
+       android:id="@+id/mapContainer1"
+       android:layout_weight="1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtrenthouse1address">
+        <Button
+            android:id="@+id/button1"
+            android:text="Share City 247"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/button2"
+            android:text="Send message to Agent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <Button
+            android:id="@+id/button3"
+            android:text="additem"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtrenthouse1pay"/>
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:text="bathroomNumber"
+        android:textSize="14dp"
+        android:textStyle="bold|italic"
+         android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button3"/>
+    
+    
+
+    <TextView
+        android:id="@+id/textView2"
+        android:text="Rentfees"
+        android:textSize="14dp"
+        android:textStyle="bold|italic"
+         android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtrenthouse1pay"/>
+
+    <TextView
+       android:id="@+id/textView3"
+       android:text="Address"
+       android:textSize="14dp"
+       android:textStyle="bold|italic"
+        android:gravity="center"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/textView2"/>
+
+
+</RelativeLayout>
